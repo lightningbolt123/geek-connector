@@ -13,7 +13,7 @@ const DashBoard = ({ getCurrentProfile, deleteAccount, profile: {profile, loadin
     useEffect(() => {
         getCurrentProfile();
     }, [getCurrentProfile])
-    return loading && profile === null ? (<Spinner />) : (<Fragment>
+    return loading && profile === null ? (<Spinner />) : (<section className="container">
         <h1 className="large text-primary">Dashboard</h1>
         <p className="lead">
             <i className="fas fa-user"></i>Welcome {user && user.name}
@@ -33,7 +33,7 @@ const DashBoard = ({ getCurrentProfile, deleteAccount, profile: {profile, loadin
             <Link to="/create-profile" className="btn btn-primary my-1">Create Profile</Link>
 
         </Fragment>)}
-    </Fragment>)
+    </section>)
 }
 
 DashBoard.propTypes = {

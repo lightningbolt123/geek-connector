@@ -10,7 +10,7 @@ const Posts = ({ post: { posts, loading }, getPosts}) => {
     useEffect(() => {
         getPosts();
     }, [getPosts]);
-    return loading ? <Spinner /> : (<Fragment>
+    return loading ? <Spinner /> : (<section className="container">
         <h1 className="large text-primary">
             Posts
         </h1>
@@ -22,7 +22,7 @@ const Posts = ({ post: { posts, loading }, getPosts}) => {
             ))}
         </div>
 
-    </Fragment>);
+    </section>);
 }
 
 Posts.propTypes = {

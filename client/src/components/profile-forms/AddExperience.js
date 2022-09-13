@@ -83,7 +83,7 @@ const AddExperience = ({ addExperience }) => {
 }
 
 AddExperience.propTypes = {
-    addExprience: PropTypes.func
+    addExprience: PropTypes.func.isRequired
 }
 
 export default connect(null, { addExperience })(AddExperience);

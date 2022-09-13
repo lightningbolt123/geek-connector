@@ -127,9 +127,7 @@ const EditProfile = ({ profile: {profile, loading}, createProfile, getCurrentPro
                 </div>
                 <div className="form-group">
                 <input type="text" placeholder="Location" name="location" value={location} onChange={(e) => onChange(e)} />
-                <small className="form-text"
-                    >City & state suggested (eg. Boston, MA)</small
-                >
+                <small className="form-text">City & state suggested (eg. Boston, MA)</small>
                 </div>
                 <div className="form-group">
                 <input type="text" placeholder="* Skills" name="skills" value={skills} onChange={(e) => onChange(e)}/>

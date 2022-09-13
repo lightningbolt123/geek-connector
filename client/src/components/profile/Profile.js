@@ -15,7 +15,7 @@ const Profile = ({ profile: { profile, loading }, auth, match, getProfileById  }
         getProfileById(match.params.id);
     }, [getProfileById, match.params.id])
     return (
-        <Fragment>
+        <section className="container">
             {profile === null || loading ? <Spinner /> : 
             (<Fragment>
                 <Link to="/profiles" className="btn btn-light">
@@ -54,7 +54,7 @@ const Profile = ({ profile: { profile, loading }, auth, match, getProfileById  }
                 </div>
             </Fragment>
             )};
-        </Fragment>
+        </section>
     )
 }
 

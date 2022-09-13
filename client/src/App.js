@@ -36,7 +36,6 @@ const App = () => {
       <Provider store={store}>
         <Router>
           <NavBar />
-          <section className="container">
             <Alert />
             <Routes>
               <Route path="/" element={<Landing />} />
@@ -53,9 +52,8 @@ const App = () => {
               <Route path="education" element={<PrivateRoute component={Education} />} />
               <Route path="posts" element={<PrivateRoute component={Posts} />} />
               <Route path="posts/:id" element={<PrivateRoute component={Post} />} />
-              <Route path="*/" element={NotFound} />
+              <Route path="/*" element={<NotFound />} />
           </Routes>
-          </section>
         </Router>
       </Provider>
     </Fragment>
