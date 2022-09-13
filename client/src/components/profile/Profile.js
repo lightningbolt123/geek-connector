@@ -1,5 +1,5 @@
 import React, { useEffect, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getProfileById } from '../../actions/profile';
@@ -10,10 +10,11 @@ import ProfileExperience from './ProfileExperience';
 import ProfileEducation from './ProfileEducation';
 import ProfileGithub from './ProfileGithub';
 
-const Profile = ({ profile: { profile, loading }, auth, match, getProfileById  }) => {
+const Profile = ({ profile: { profile, loading }, auth, getProfileById  }) => {
+    const { id } = useParams();
     useEffect(() => {
-        getProfileById(match.params.id);
-    }, [getProfileById, match.params.id])
+        getProfileById(id);
+    }, [getProfileById, id])
     return (
         <section className="container">
             {profile === null || loading ? <Spinner /> : 
