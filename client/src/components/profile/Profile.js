@@ -30,8 +30,8 @@ const Profile = ({ profile: { profile, loading }, auth, getProfileById  }) => {
                 <div className="profile-grid my-1">
                     <ProfileTop profile={profile} />
                     <ProfileAbout profile={profile} />
-                    <div class="profile-exp bg-white p-2">
-                        <h2 class="text-primary">Experience</h2>
+                    <div className="profile-exp bg-white p-2">
+                        <h2 className="text-primary">Experience</h2>
                         {profile.experiences.length > 0 ? (
                             <Fragment>
                                 {profile.experiences.map( experience => (
@@ -41,8 +41,8 @@ const Profile = ({ profile: { profile, loading }, auth, getProfileById  }) => {
                         ) : (<h4>No experience credentials</h4>)}
                     </div>
 
-                    <div class="profile-edu bg-white p-2">
-                        <h2 class="text-primary">Education</h2>
+                    <div className="profile-edu bg-white p-2">
+                        <h2 className="text-primary">Education</h2>
                         {profile.education.length > 0 ? (
                             <Fragment>
                                 {profile.education.map( edu => (
