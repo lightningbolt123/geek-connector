@@ -156,6 +156,10 @@ img {
   color: #333;
 }
 
+.alert-container {
+  margin-top: 80px;
+}
+
 .btn-primary,
 .bg-primary,
 .badge-primary,
@@ -490,6 +494,10 @@ button {
 
 /* Mobile Styles */
 @media (max-width: 700px) {
+  .alert-container {
+    margin-top: 120px;
+  }
+
   .container {
     margin-top: 8rem;
   }
